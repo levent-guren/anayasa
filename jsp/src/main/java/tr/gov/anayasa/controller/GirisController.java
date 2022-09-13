@@ -21,6 +21,12 @@ public class GirisController {
 		return "index";
 	}
 
+	@GetMapping("/cikis")
+	ModelAndView cikis(HttpSession session) {
+		session.invalidate();
+		return new ModelAndView("index").addObject("mesaj", "Başarı ile çıkış yaptınız");
+	}
+
 	@PostMapping("/giris")
 	ModelAndView girisYap(GirisModel model, HttpSession session) {
 		ModelAndView mav = new ModelAndView();

@@ -1,0 +1,1 @@
+insert into personel(adi, dogum_tarihi, email) values ('Ali', '1981-02-04', 'ali@gmail.com');

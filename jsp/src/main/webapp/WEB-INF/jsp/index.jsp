@@ -10,6 +10,9 @@
 <c:if test="${not empty hata}">
 <font color="red"><strong>${hata}</strong></font>
 </c:if>
+<c:if test="${not empty mesaj}">
+<font color="blue"><strong>${mesaj}</strong></font>
+</c:if>
 <form action="<c:url value="/giris" />" method="post">
     Username: <input type="text" name="username" /><br/>
     Password: <input type="password" name="password" /><br/>
