@@ -10,6 +10,7 @@ import tr.gov.anayasa.entity.Personel;
 
 @Named
 public class PersonelService {
+	@SuppressWarnings("cdi-ambiguous-dependency")
 	@Inject
 	private PersonelDAO personelDAO;
 
