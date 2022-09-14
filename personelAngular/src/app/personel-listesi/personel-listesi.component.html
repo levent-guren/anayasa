@@ -1,0 +1,18 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Sıra No</th>
+      <th>Adı</th>
+      <th>Email</th>
+      <th>Doğum Tarihi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let personel of personeller">
+      <td>{{ personel.id }}</td>
+      <td>{{ personel.adi }}</td>
+      <td>{{ personel.email }}</td>
+      <td>{{ personel.dogumTarihi | date : 'dd/MM/yyyy' }}</td>
+    </tr>
+  </tbody>
+</table>
