@@ -17,4 +17,16 @@ public class PersonelService {
 	public List<Personel> getTumPersoneller() {
 		return personelDAO.getTumPersoneller();
 	}
+
+	public Personel kaydet(Personel personel) {
+		return personelDAO.kaydet(personel);
+	}
+
+	public List<Personel> getPersonellerAdaGore(String adi) {
+		return personelDAO.getPersonellerAdaGore(adi);
+	}
+
+	public List<Personel> getPersonellerBolumAdinaGore(String bolumAdi) {
+		return personelDAO.getPersonellerBolumAdinaGore(bolumAdi);
+	}
 }

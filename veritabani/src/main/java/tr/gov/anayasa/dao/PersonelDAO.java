@@ -18,4 +18,17 @@ public class PersonelDAO {
 	public List<Personel> getTumPersoneller() {
 		return personelRepository.findAll();
 	}
+
+	public Personel kaydet(Personel personel) {
+		return personelRepository.save(personel);
+	}
+
+	public List<Personel> getPersonellerAdaGore(String adi) {
+		return personelRepository.findByAdiContainingIgnoreCase(adi);
+	}
+
+	public List<Personel> getPersonellerBolumAdinaGore(String bolumAdi) {
+		return personelRepository.findByBolumAdi(bolumAdi);
+	}
+
 }
