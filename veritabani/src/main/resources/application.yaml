@@ -3,7 +3,10 @@ hibernate:
 spring:
   jpa:
     hibernate:
+      ddl-auto: none
       naming:
         implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
   datasource:
-    url: jdbc:h2:mem:anayasa
+    url: jdbc:postgresql://localhost:5432/anayasa
+    username: anayasa
+    driver-class-name: org.postgresql.Driver

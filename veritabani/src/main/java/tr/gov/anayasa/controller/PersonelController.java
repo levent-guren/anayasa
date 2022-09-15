@@ -18,12 +18,6 @@ public class PersonelController {
 
 	@GetMapping("/personeller")
 	public ResponseEntity<List<Personel>> getTumPersoneller() {
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		return ResponseEntity.ok(personelService.getTumPersoneller());
 	}
 }
