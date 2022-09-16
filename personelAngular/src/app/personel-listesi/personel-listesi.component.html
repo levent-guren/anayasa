@@ -1,18 +1,24 @@
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Sıra No</th>
-      <th>Adı</th>
-      <th>Email</th>
-      <th>Doğum Tarihi</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let personel of personeller">
-      <td>{{ personel.id }}</td>
-      <td>{{ personel.adi }}</td>
-      <td>{{ personel.email }}</td>
-      <td>{{ personel.dogumTarihi | date : 'dd/MM/yyyy' }}</td>
-    </tr>
-  </tbody>
-</table>
+{{this.myForm.get('secili')?.value | json }}
+<form [formGroup]="myForm">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Seç</th>
+        <th>Sıra No</th>
+        <th>Adı</th>
+        <th>Email</th>
+        <th>Doğum Tarihi</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let personel of personeller; let i = index">
+          <td  formArrayName="secili"><input type="checkbox" [formControlName]="i" /></td>
+          <td>{{ personel.id }}</td>
+          <td>{{ personel.adi }}</td>
+          <td>{{ personel.email }}</td>
+          <td>{{ personel.dogumTarihi | date : 'dd/MM/yyyy' }}</td>
+        </tr>
+    </tbody>
+  </table>
+</form>
+<button (click)="sil()">Sil</button>

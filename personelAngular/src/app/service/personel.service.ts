@@ -13,4 +13,7 @@ export class PersonelService {
   getPersoneller(): Observable<Personel[]> {
     return this.http.get<Personel[]>('http://localhost:8080/personeller');
   }
+  personellerSil(idler: number[]) {
+    return this.http.delete('http://localhost:8080/personel', { body: { idler } });
+  }
 }

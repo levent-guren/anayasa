@@ -29,4 +29,12 @@ public class PersonelService {
 	public List<Personel> getPersonellerBolumAdinaGore(String bolumAdi) {
 		return personelDAO.getPersonellerBolumAdinaGore(bolumAdi);
 	}
+
+	public void personelSil(int id) {
+		personelDAO.sil(id);
+	}
+
+	public void personelleriSil(List<Integer> idler) {
+		personelDAO.personelleriSil(idler);
+	}
 }

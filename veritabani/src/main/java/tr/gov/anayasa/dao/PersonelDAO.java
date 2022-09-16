@@ -31,4 +31,12 @@ public class PersonelDAO {
 		return personelRepository.findByBolumAdi(bolumAdi);
 	}
 
+	public void sil(int id) {
+		personelRepository.deleteById(id);
+	}
+
+	public void personelleriSil(List<Integer> idler) {
+		personelRepository.deleteAllById(idler);
+	}
+
 }

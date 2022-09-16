@@ -20,4 +20,7 @@ public interface PersonelRepository extends JpaRepository<Personel, Integer> {
 
 	@Query(value = "from Personel p where p.bolum.adi = ?1")
 	public List<Personel> personelBulBolumAdinaGore(String bolumAdi);
+
+	@Query(value = "select p,b from Personel p join p.bolum b")
+	public List<Object[]> getPersonelveBolumler();
 }
